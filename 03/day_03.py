@@ -59,3 +59,22 @@ print(total)
 #Part 2
 ##################
 
+total_2 = 0
+for i in range(0,300,3):
+    line_1 = lines[i]
+    line_2 = lines[i+1]
+    line_3 = lines[i+2]
+
+
+    for letter_1 in line_1:
+        for letter_2 in line_2:
+            if letter_1 == letter_2:
+                for letter_3 in line_3:
+                    if letter_1 == letter_3:
+                        badge = letter_3
+    p_score = p_score_dict[badge]
+    total_2 += p_score
+
+
+print("part 2: ", total_2)
+
